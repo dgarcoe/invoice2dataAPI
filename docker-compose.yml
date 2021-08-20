@@ -1,0 +1,12 @@
+version: '2'
+services:
+
+  invoice_api:
+    build:
+      context: .
+    restart: always
+    container_name: invoice_api
+    ports:
+      - 8000:80
+    volumes:
+      - ./templates:/app/templates
